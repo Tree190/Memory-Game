@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+body {
+    min-height: 100vh;
+    font-family: "Whisper", cursive;
+    letter-spacing: 2px;
+    min-width: 100vh;
+    background-color: #1f1f20;
+    color: white;
+  }
+
+  .grid-container
+{
+  margin: 20px;
+}
+
+  p {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      color: #3b3024;
+  }
+  
+  .actions {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .actions button {
+      padding: 8px 16px;
+      font-size: 30px;
+      border-radius: 10px;
+      background-color: #3b3024;
+      color: #917966;
+      border: #3b3024 solid 2px;
+      font-family: "Whisper", cursive;
+      margin: 10px;
+  }
+  
+  .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 126px;
+    grid-template-columns: repeat(6, 140px);
+    grid-template-rows: repeat(2, calc(140px / 2 * 3));
+  }
+  
+  .card {
+    height: calc(140px / 2 * 3);
+    width: 226.5px;
+    height: 326px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .front-image {
+    width: 226.5px;
+    height: 326px;
+    background-color: #917966;
+    border-radius: 10px;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+      backface-visibility: hidden;
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .back {
+    background-image: url("assets/card\ back.png");
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+  }
+  
+  .card .front {
+    transform: rotateY(180deg);
+  }
